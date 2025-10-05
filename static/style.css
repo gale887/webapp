@@ -1,0 +1,328 @@
+/* WWF-Inspired Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+    min-height: 100vh;
+    color: #2d5a2d;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #2d5a2d 0%, #4a7c59 100%);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header .subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* WWF Logo Area */
+.wwf-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.panda-icon {
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.panda-icon::before {
+    content: "🐼";
+    font-size: 2em;
+}
+
+.wwf-text {
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Main Content */
+.main-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d5a2d;
+    font-size: 1.1em;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a7c59;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+}
+
+.form-control::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Buttons */
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4a7c59 0%, #2d5a2d 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 124, 89, 0.4);
+    background: linear-gradient(135deg, #2d5a2d 0%, #4a7c59 100%);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #2d5a2d;
+    border: 2px solid #e0e0e0;
+}
+
+.btn-secondary:hover {
+    background: #e8f5e8;
+    border-color: #4a7c59;
+    transform: translateY(-1px);
+}
+
+/* Success Messages */
+.success-message {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border: 2px solid #28a745;
+    color: #155724;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.success-message h1 {
+    color: #155724;
+    margin-bottom: 10px;
+}
+
+/* Suggestions */
+.suggestions {
+    margin: 30px 0;
+}
+
+.suggestion {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.suggestion:hover {
+    border-color: #4a7c59;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.suggestion strong {
+    color: #2d5a2d;
+    font-size: 1.2em;
+}
+
+.match-score {
+    color: #6c757d;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.suggestion button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4a7c59 0%, #2d5a2d 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.suggestion button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(74, 124, 89, 0.3);
+}
+
+/* Error Messages */
+.error-message {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border: 2px solid #dc3545;
+    color: #721c24;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.nav-links a {
+    color: #4a7c59;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #4a7c59;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-links a:hover {
+    background: #4a7c59;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(74, 124, 89, 0.3);
+}
+
+/* Nature Elements */
+.nature-decoration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.05;
+}
+
+.leaf {
+    position: absolute;
+    font-size: 2em;
+    color: #4a7c59;
+    animation: float 6s ease-in-out infinite;
+}
+
+.leaf:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.leaf:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
+.leaf:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 4s; }
+.leaf:nth-child(4) { bottom: 15%; right: 10%; animation-delay: 1s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+    
+    .wwf-text {
+        font-size: 1.5em;
+    }
+    
+    .panda-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #2d5a2d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+.footer p {
+    opacity: 0.8;
+}

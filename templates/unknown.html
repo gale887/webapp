@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unknown Country - WWF Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nature-decoration">
+        <div class="leaf">🍃</div>
+        <div class="leaf">🌿</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🌿</div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="wwf-logo">
+                <div class="panda-icon"></div>
+                <div class="wwf-text">WWF</div>
+            </div>
+            <h1>Help Us Learn!</h1>
+            <p class="subtitle">Together we can expand our knowledge of the world</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div style="background: #fff3cd; border: 2px solid #ffeaa7; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+                <h2 style="color: #856404; margin-bottom: 15px;">🌍 I don't know the capital of {{ country }}. What is it?</h2>
+                <p style="color: #856404;"><strong>Note:</strong> The country will be validated against a global database before being added to ensure accuracy.</p>
+            </div>
+            
+            <form action="{{ url_for('save') }}" method="POST">
+                <div class="form-group">
+                    <label for="capital">Capital City:</label>
+                    <input type="text" id="capital" name="city" class="form-control" placeholder="Enter the capital here..." required>
+                    <input type="hidden" name="country" value="{{ country }}">
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary">Add to Database</button>
+                </div>
+            </form>
+            
+            <div class="nav-links">
+                <a href="/" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Country Capital Quiz - Inspired by WWF's mission to protect our planet</p>
+    </footer>
+</body>
+</html>

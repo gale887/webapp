@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success - WWF Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nature-decoration">
+        <div class="leaf">🍃</div>
+        <div class="leaf">🌿</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🌿</div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="wwf-logo">
+                <div class="panda-icon"></div>
+                <div class="wwf-text">WWF</div>
+            </div>
+            <h1>Great Job!</h1>
+            <p class="subtitle">You've discovered another piece of our amazing world</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="success-message">
+                <h1>🎉 The capital of {{ country }} is {{ city }}! 🎉</h1>
+                <p style="margin-top: 15px; font-size: 1em;">Keep exploring the world and learning about different countries and their capitals.</p>
+            </div>
+            
+            <div class="nav-links">
+                <a href="/" class="btn btn-primary">Try Another Country</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Country Capital Quiz - Inspired by WWF's mission to protect our planet</p>
+    </footer>
+</body>
+</html>

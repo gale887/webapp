@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Capital Quiz - WWF Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nature-decoration">
+        <div class="leaf">🍃</div>
+        <div class="leaf">🌿</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🌿</div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="wwf-logo">
+                <div class="panda-icon"></div>
+                <div class="wwf-text">WWF</div>
+            </div>
+            <h1>Country Capital Quiz</h1>
+            <p class="subtitle">Discover the capitals of the world while learning about our planet</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #2d5a2d;">Tell me a country and I'll tell you its capital:</h2>
+            <form action="/capital" method="POST">
+                <div class="form-group">
+                    <label for="country">Country Name:</label>
+                    <input type="text" id="country" name="city" class="form-control" placeholder="Enter a country name..." required>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary">Find Capital</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Country Capital Quiz - Inspired by WWF's mission to protect our planet</p>
+    </footer>
+</body>
+</html> 
